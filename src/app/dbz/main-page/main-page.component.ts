@@ -19,18 +19,12 @@ export class MainPageComponent {
   ];
 
   nuevo: Personaje = {
-    nombre: '',
+    nombre: 'Vegita',
+    poder: 20000
   }
 
-  agregar() {
-    if (this.nuevo.nombre.trim().length === 0) {
-      return;
-    }
-    if (this.nuevo.poder === undefined) {
-      this.nuevo.poder = 0;
-    }
-
-    this.personajes.push(this.nuevo);
+  agregarNuevoPersonaje(argumento: Personaje) {
+    this.personajes.push(argumento);
     this.nuevo = {
       nombre: '',
     }
